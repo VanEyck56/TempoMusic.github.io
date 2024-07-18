@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthode Pédagogique</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for pedagogie.html */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f4; /* Light blue background */
+        }
+
+        #pedagogie {
+            background: url('pedagogie-specific-background.jpg') no-repeat center top;
+            background-size: cover;
+            color: white;
+            height: 100vh; /* Adjust as needed */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Align content at the center */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 20px; /* Spacing around the section */
+        }
+
+        .content {
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2; /* Ensure content is above background image */
+        }
+
+        .content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Your Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="pedagogie.html">Pédagogie</a></li>
+                <li><a href="prices.html">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="pedagogie">
+        <div class="content">
+            <h2>Méthode Pédagogique</h2>
+            <p>Insérez ici le contenu décrivant votre méthode pédagogique.</p>
+        </div>
+    </section>
+
+    <!-- Scripts and other elements can be added here as needed -->
+
+</body>
+</html>

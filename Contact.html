@@ -1,50 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Lessons with [Your Name]</title>
+    <title>Contactez-moi</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        /* Styles spécifiques pour contact.html */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f4; /* Couleur de fond bleu clair */
+        }
+
+        #contact {
+            background: url('contact-specific-background.jpg') no-repeat center top;
+            background-size: cover;
+            color: white;
+            height: 100vh; /* Ajuster si nécessaire */
+            display: flex;
+            justify-content: center; /* Centrer horizontalement */
+            align-items: flex-end; /* Positionner le formulaire en bas */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 20px; /* Espacement autour de la section */
+        }
+
+        .form-container {
+            width: 320px; /* Largeur fixe de la boîte de formulaire */
+            padding: 20px; /* Espacement interne */
+            background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre */
+            margin-bottom: 5px; /* Marge en bas */
+	    margin-right: 150px;
+        }
+
+        .form-container h2 {
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            font-size: 24px; /* Taille de police du titre */
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: calc(100% - 40px); /* Largeur des champs de formulaire */
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff; /* Fond blanc pour les entrées */
+            resize: none;
+            font-size: 16px; /* Taille de police des champs */
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2b7cbb; /* Bouton de soumission bleu clair */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px; /* Taille de police du bouton */
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #1e5f8b; /* Bleu plus foncé au survol */
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Votre Logo">
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="prices.html">Prices</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="pedagogie.html">Pédagogie</a></li>
+                <li><a href="prices.html">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="welcome">
-        <div class="content">
-            <h1>Welcome to Music Lessons with [Your Name]</h1>
-            <img src="logo.png" alt="Logo">
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="content">
-            <h2>About Me</h2>
-            <p>[Details about your background and teaching proposal]</p>
-        </div>
-    </section>
-
-    <section id="prices">
-        <div class="content">
-            <h2>Prices</h2>
-            <p>[Details about your prices]</p>
-        </div>
-    </section>
-
     <section id="contact">
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Phone: [Your Phone Number]</p>
-            <p>Email: <a href="mailto:[Your Email]">[Your Email]</a></p>
+        <div class="form-container">
+            <h2>Contactez-moi</h2>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSf9nPzpMI598DUebOMzSm5YALTNywW93_y0mKEEtivkn8HoHQ/formResponse" method="POST" target="_blank">
+                <input type="text" name="entry.1234567890" placeholder="Nom" required>
+                <input type="text" name="entry.0987654321" placeholder="Email" required>
+                <textarea name="entry.2468013579" placeholder="Votre message" rows="3" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
     </section>
 </body>

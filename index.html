@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Lessons with [Your Name]</title>
+    <title>Cours de musique avec [Votre Nom]</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Votre Logo">
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="prices.html">Prices</a></li>
+                <li><a href="#welcome">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="pedagogie.html">Pédagogie</a></li>
+                <li><a href="prices.html">Tarifs</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="welcome">
-        <div class="content">
-            <h1>Welcome to Music Lessons with [Your Name]</h1>
-            <img src="logo.png" alt="Logo">
-        </div>
+        <div class="background-image"></div>
     </section>
 
-    <section id="about">
-        <div class="content">
-            <h2>About Me</h2>
-            <p>[Details about your background and teaching proposal]</p>
-        </div>
-    </section>
+    <a href="about.html">
+        <section id="about">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2>À propos de moi</h2>
+                <p>Cliquez pour en savoir plus sur mon parcours et ma philosophie d'enseignement.</p>
+            </div>
+        </section>
+    </a>
 
-    <section id="prices">
-        <div class="content">
-            <h2>Prices</h2>
-            <p>[Details about your prices]</p>
-        </div>
-    </section>
+    <a href="pedagogie.html">
+        <section id="pedagogie">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2>Pédagogie</h2>
+                <p>Cliquez pour voir les détails de mes tarifs.</p>
+            </div>
+        </section>
+    </a>
 
-    <section id="contact">
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Phone: [Your Phone Number]</p>
-            <p>Email: <a href="mailto:[Your Email]">[Your Email]</a></p>
-        </div>
-    </section>
+    <a href="prices.html">
+        <section id="prices">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2>Tarifs</h2>
+                <p>Cliquez pour voir les détails de mes tarifs.</p>
+            </div>
+        </section>
+    </a>
+
+    <a href="contact.html">
+        <section id="contact">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2>Contact</h2>
+                <p>Cliquez pour me contacter.</p>
+            </div>
+        </section>
+    </a>
+
 </body>
 </html>

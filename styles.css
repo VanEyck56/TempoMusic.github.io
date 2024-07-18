@@ -1,26 +1,42 @@
+/* Global styles */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    background-color: #333;
     color: white;
     padding: 1rem;
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Ensure header stays on top */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
@@ -32,45 +48,39 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding-top: 80px; /* Ensure content starts below fixed header */
+    overflow: hidden; /* Ensure no scrollbars appear due to fixed positioning */
 }
 
 section {
-    height: 100vh; /* Full viewport height for each section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
     position: relative;
     overflow: hidden;
-}
-
-#welcome {
-    background: url('welcome-background.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-#about {
-    background: url('about-background.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-#prices {
-    background: url('prices-background.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-#contact {
-    background: url('contact-background.jpg') no-repeat center center/cover;
-    color: white;
+    height: 100vh;
 }
 
 .content {
-    text-align: center;
     max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.content h1, .content h2 {
+.section-link:hover .content {
+    opacity: 1;
+}
+
+.content h2 {
     margin-bottom: 1rem;
 }
 
@@ -81,7 +91,43 @@ section {
 }
 
 @media (max-width: 768px) {
-    .content {
-        padding: 0 1rem;
+    .logo img {
+        height: 40px; /* Adjust logo size for smaller screens */
     }
+
+    .content {
+        padding: 1rem;
+    }
+}
+
+/* Specific styles for sections */
+
+#welcome .background-image {
+    background: url('welcome-background.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100%;
+}
+
+#about .background-image {
+    background: url('about-background.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100%;
+}
+
+#pedagogie .background-image {
+    background: url('pedagogie-background.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100%;
+}
+
+#prices .background-image {
+    background: url('prices-background.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100%;
+}
+
+#contact .background-image {
+    background: url('contact-background.jpg') no-repeat center top;
+    background-size: cover;
+    height: 100%;
 }
