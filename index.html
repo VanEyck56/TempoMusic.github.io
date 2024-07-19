@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours de musique avec [Votre Nom]</title>
+    <title>Page d'accueil</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
                 <img src="logo.png" alt="Votre Logo">
             </div>
             <ul>
-                <li><a href="#welcome">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="pedagogie.html">Pédagogie</a></li>
                 <li><a href="prices.html">Tarifs</a></li>
@@ -22,49 +22,46 @@
         </nav>
     </header>
 
-    <section id="welcome">
-        <div class="background-image"></div>
-    </section>
-
-    <a href="about.html">
-        <section id="about">
-            <div class="background-image"></div>
+    <main>
+        <section id="welcome">
+            <div class="background-image" style="background-image: url('welcome-background.jpg');"></div>
             <div class="content">
-                <h2>À propos de moi</h2>
-                <p>Cliquez pour en savoir plus sur mon parcours et ma philosophie d'enseignement.</p>
+                <h2>Bienvenue</h2>
+                <p>Votre message ici</p>
             </div>
         </section>
-    </a>
 
-    <a href="pedagogie.html">
+        <section id="about">
+            <div class="background-image" style="background-image: url('about-background.jpg');"></div>
+            <div class="content">
+                <h2>À propos</h2>
+                <p>Votre message ici</p>
+            </div>
+        </section>
+
         <section id="pedagogie">
-            <div class="background-image"></div>
+            <div class="background-image" style="background-image: url('pedagogie-background.jpg');"></div>
             <div class="content">
                 <h2>Pédagogie</h2>
-                <p>Cliquez pour voir les détails de mes tarifs.</p>
+                <p>Votre message ici</p>
             </div>
         </section>
-    </a>
 
-    <a href="prices.html">
         <section id="prices">
-            <div class="background-image"></div>
+            <div class="background-image" style="background-image: url('prices-background.jpg');"></div>
             <div class="content">
                 <h2>Tarifs</h2>
-                <p>Cliquez pour voir les détails de mes tarifs.</p>
+                <p>Votre message ici</p>
             </div>
         </section>
-    </a>
 
-    <a href="contact.html">
         <section id="contact">
-            <div class="background-image"></div>
+            <div class="background-image" style="background-image: url('contact-background.jpg');"></div>
             <div class="content">
                 <h2>Contact</h2>
-                <p>Cliquez pour me contacter.</p>
+                <p>Votre message ici</p>
             </div>
         </section>
-    </a>
-
+    </main>
 </body>
 </html>
