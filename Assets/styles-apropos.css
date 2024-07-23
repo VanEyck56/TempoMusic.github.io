@@ -1,0 +1,53 @@
+/* Apropos.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.fixed-background {
+    position: relative;
+    height: 100vh; /* Hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+.background-image {
+    position: fixed; /* Fixer l'image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Placer l'image derrière le texte */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* S'assurer que le texte est au-dessus de l'image */
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Ajouter un fond semi-transparent pour le texte */
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-section {
+    margin: 2rem 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Animation pour faire apparaître le texte au défilement */
+.text-section:nth-of-type(1) {
+    opacity: 1;
+}
+.text-section:nth-of-type(2) {
+    opacity: 0;
+    transition-delay: 2s; /* Apparition après 2 secondes */
+}
+.text-section:nth-of-type(3) {
+    opacity: 0;
+    transition-delay: 4s; /* Apparition après 4 secondes */
+}
