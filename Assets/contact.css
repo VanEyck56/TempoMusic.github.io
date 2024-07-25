@@ -24,7 +24,7 @@ html, body {
 
 .cd-content {
     position: relative;
-    top: 20%;
+    top: 15%;
     z-index: 2;
     max-width: 800px;
     margin: auto;
@@ -37,9 +37,10 @@ html, body {
 
 .form-container {
      position: absolute;
-     bottom: 14%;
-     left: 7%;
-     width: 320px; /* Largeur fixe de la boîte de formulaire */
+     top: 60%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 290px; /* Largeur fixe de la boîte de formulaire */
      padding: 20px; /* Espacement interne */
      background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
      border-radius: 10px;
