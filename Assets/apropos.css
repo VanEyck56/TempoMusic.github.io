@@ -11,11 +11,11 @@ html, body {
 }
 
 .cd-fixed-background.img-1 {
-    background-image: url('assets/apropos-specific-background-1.jpg');
+    background-image: url('apropos-specific-background.jpg');
 }
 
 .cd-fixed-background.img-2 {
-    background-image: url('assets/apropos-specific-background-2.jpg');
+    background-image: url('apropos-specific-background.jpg');
 }
 
 .cd-content {
