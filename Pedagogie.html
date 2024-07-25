@@ -70,14 +70,58 @@
         </nav>
     </header>
 
-    <section id="pedagogie">
-        <div class="content">
-            <h2>Méthode Pédagogique</h2>
-            <p>Insérez ici le contenu décrivant votre méthode pédagogique.</p>
-        </div>
-    </section>
+    <section class="cd-fixed-background img-1" data-type="slider-item">
+   <div class="cd-content">
+      <h2>Title here</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor beatae, laudantium eos fugiat, deserunt delectus quibusdam quae placeat, tempora ea? Nulla ducimus, magnam sunt repellendus modi, ad ipsam est.</p>
+   </div>
+</section>
+
+<section class="cd-fixed-background img-2" data-type="slider-item">
+   <!-- ... -->
+</section>
+
+<nav>
+   <ul class="cd-vertical-nav">
+      <li><a href="#0" class="cd-prev inactive">Next</a></li>
+      <li><a href="#0" class="cd-next">Prev</a></li>
+   </ul> <!-- cd-vertical-nav -->
+</nav>
 
     <!-- Scripts and other elements can be added here as needed -->
 <script src="script.js"></script>
 </body>
 </html>
+
+.cd-fixed-background .cd-content::after {
+  /* phone image on small devices */
+  content: '';
+  display: block;
+  width: 100%;
+  padding: 60% 0;
+  margin: 2em auto 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.cd-fixed-background {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.cd-fixed-background.img-1 {
+  background-image: url("../img/img-1.jpg");
+}
+
+.cd-fixed-background.img-2 {
+  background-image: url("../img/img-2.jpg");
+}
+
+.cd-fixed-background.img-3 {
+  background-image: url("../img/img-3.jpg");
+}

@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+}
+
+.cd-fixed-background {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.cd-fixed-background.img-1 {
+    background-image: url('assets/apropos-specific-background-1.jpg');
+}
+
+.cd-fixed-background.img-2 {
+    background-image: url('assets/apropos-specific-background-2.jpg');
+}
+
+.cd-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.cd-vertical-nav {
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.cd-vertical-nav a {
+    display: block;
+    margin-bottom: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+}
+
+.cd-vertical-nav a.inactive {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cd-vertical-nav a:hover {
+    opacity: 1;
+}

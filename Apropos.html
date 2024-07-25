@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/apropos.css"> <!-- Ajoutez un fichier CSS spécifique pour la page -->
+    <link rel="stylesheet" href="assets/apropos.css"> <!-- Ajout du fichier CSS spécifique pour la page -->
 </head>
 <body>
     <header>
@@ -45,29 +45,41 @@
     </header>
 
     <main>
-        <section class="fixed-background">
-            <div class="background-image" style="background-image: url('assets/apropos-specific-background.jpg');"></div>
-            <div class="content">
-                <div class="text-section">
-                    <h2>Mon parcours</h2>
-                    <p>Premier paragraphe sur votre parcours.</p>
-                    <p>Deuxième paragraphe sur votre parcours.</p>
-                    <p>Troisième paragraphe sur votre parcours.</p>
-                </div>
-                <div class="text-section">
-                    <h2>Suite de mon parcours</h2>
-                    <p>Premier paragraphe de la suite de votre parcours.</p>
-                    <p>Deuxième paragraphe de la suite de votre parcours.</p>
-                    <p>Troisième paragraphe de la suite de votre parcours.</p>
-                </div>
-                <div class="text-section">
-                    <h2>Projet Tempo Music</h2>
-                    <p>Premier paragraphe sur le projet Tempo Music.</p>
-                    <p>Deuxième paragraphe sur le projet Tempo Music.</p>
-                    <p>Troisième paragraphe sur le projet Tempo Music.</p>
-                </div>
+        <section class="cd-fixed-background img-1">
+            <div class="cd-content">
+                <h2>Title here</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor beatae, laudantium eos fugiat, deserunt delectus quibusdam quae placeat, tempora ea? Nulla ducimus, magnam sunt repellendus modi, ad ipsam est.</p>
             </div>
         </section>
+
+        <section class="cd-fixed-background img-2">
+            <div class="cd-content">
+                <h2>Another Title</h2>
+                <p>Another piece of text here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor beatae, laudantium eos fugiat, deserunt delectus quibusdam quae placeat, tempora ea? Nulla ducimus, magnam sunt repellendus modi, ad ipsam est.</p>
+            </div>
+        </section>
+
+        <nav>
+            <ul class="cd-vertical-nav">
+                <li><a href="#0" class="cd-prev inactive">Next</a></li>
+                <li><a href="#0" class="cd-next">Prev</a></li>
+            </ul>
+        </nav>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const button = document.getElementById('burger');
+            const content = document.getElementById('mobile-menu');
+            const cross = document.getElementById('cross');
+
+            button.addEventListener('click', () => {
+                content.classList.toggle('hide');
+            });
+            cross.addEventListener('click', () => {
+                content.classList.toggle('hide');
+            });
+        });
+    </script>
 </body>
 </html>
