@@ -29,28 +29,3 @@ html, body {
     padding: 2rem;
 }
 
-.cd-vertical-nav {
-    position: fixed;
-    right: 10%;
-    top: 90%;
-    transform: translateY(-50%);
-    z-index: 3;
-}
-
-.cd-vertical-nav a {
-    display: block;
-    margin-bottom: 1rem;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: opacity 0.3s;
-}
-
-.cd-vertical-nav a.inactive {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.cd-vertical-nav a:hover {
-    opacity: 1;
-}
