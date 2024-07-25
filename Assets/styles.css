@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #1a1f3e;
     color: white;
     padding: 1rem;
     position: fixed;
@@ -110,6 +110,10 @@ section {
     .content {
         padding: 1rem;
     }
+
+    nav ul {
+	    flex-direction: column;
+	}
 }
 
 #welcome {
@@ -290,24 +294,27 @@ section {
 }
 
 /* Styles menu mobile */
-
 .mobile-menu {
     position: absolute;
-    top: 82px;
-    left: 30%;
-    height: 500px;
+    top: 100%; /* Positionné juste sous le header */
+    right: 0; /* Aligner à gauche de la fenêtre */
+    max-width: 600px; /* Limiter la largeur maximale */
     background-color: #333;
-    width: 90vw;
-    max-width: 600px; /* Ajuster si nécessaire */
     border-radius: 5px;
     transition: max-height 0.3s ease;
     overflow: hidden;
     z-index: 1001;
+    box-sizing: border-box;
 }
 
 .mobile-menu-content {
     display: flex;
     flex-direction: column;
+    padding: 10px; /* Padding autour des éléments */
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto ;
+    box-sizing: border-box;
 }
 
 .mobile-menu ul {
@@ -318,6 +325,7 @@ section {
 
 .mobile-menu ul li {
     border-bottom: 1px solid #444;
+    margin: 0;
 }
 
 .mobile-menu ul li a {
@@ -326,8 +334,20 @@ section {
     display: block;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mobile-menu ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+#cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
