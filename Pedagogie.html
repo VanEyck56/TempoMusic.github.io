@@ -3,125 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Méthode Pédagogique</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Specific styles for pedagogie.html */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f7f4; /* Light blue background */
-        }
-
-        #pedagogie {
-            background: url('pedagogie-specific-background.jpg') no-repeat center top;
-            background-size: contain;
-            color: white;
-            height: 100vh; /* Adjust as needed */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Align content at the center */
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            padding: 20px; /* Spacing around the section */
-        }
-
-        .content {
-            max-width: 800px;
-            padding: 2rem;
-            background-color: rgba(0, 0, 0, 0.7); /* Dark background */
-            color: white;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 2; /* Ensure content is above background image */
-        }
-
-        .content h2 {
-            margin-bottom: 1rem;
-        }
-
-        .content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-    </style>
+    <title>Pédagogie</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/pedagogie.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="Your Logo">
+                <img src="assets/logo.jpg" alt="Votre Logo">
             </div>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="pedagogie.html">Pédagogie</a></li>
-                <li><a href="prices.html">Tarifs</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="desktop-menu">
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='apropos.html'>À propos</a></li>
+                <li><a href='pedagogie.html'>Pédagogie</a></li>
+                <li><a href='tarifs.html'>Tarifs</a></li>
+                <li><a href='contact.html'>Contact</a></li>
             </ul>
+            <div id="burger" class="menu-burger">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div id="mobile-menu" class="mobile-menu hide">
+                <div id="cross" class="cross">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                        <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+                        <path d="M8 8L40 40" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 40L40 8" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <ul>
+                    <li><a href='index.html'>Accueil</a></li>
+                    <li><a href='apropos.html'>À propos</a></li>
+                    <li><a href='pedagogie.html'>Pédagogie</a></li>
+                    <li><a href='tarifs.html'>Tarifs</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <section class="cd-fixed-background img-1" data-type="slider-item">
-   <div class="cd-content">
-      <h2>Title here</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor beatae, laudantium eos fugiat, deserunt delectus quibusdam quae placeat, tempora ea? Nulla ducimus, magnam sunt repellendus modi, ad ipsam est.</p>
-   </div>
-</section>
+    <main>
+        <section class="cd-fixed-background img-1">
+            <div class="cd-content">
+                <h2>Title here</h2>
+                <p>pedagogie fhfdsfsd</p>
+            </div>
+        </section>
 
-<section class="cd-fixed-background img-2" data-type="slider-item">
-   <!-- ... -->
-</section>
+        <section class="cd-fixed-background img-2">
+            <div class="cd-content">
+                <h2>Another Title</h2>
+                <p>Another piece of text here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolor beatae, laudantium eos fugiat, deserunt delectus quibusdam quae placeat, tempora ea? Nulla ducimus, magnam sunt repellendus modi, ad ipsam est.</p>
+            </div>
+        </section>
 
-<nav>
-   <ul class="cd-vertical-nav">
-      <li><a href="#0" class="cd-prev inactive">Next</a></li>
-      <li><a href="#0" class="cd-next">Prev</a></li>
-   </ul> <!-- cd-vertical-nav -->
-</nav>
+       
+        <nav>
+            <ul class="cd-vertical-nav">
+                <li><a href="#0" class="cd-prev inactive">Prev</a></li>
+                <li><a href="#0" class="cd-next">Next</a></li>
+            </ul>
+        </nav>
+    </main>
 
-    <!-- Scripts and other elements can be added here as needed -->
-<script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const sections = document.querySelectorAll('.cd-fixed-background');
+            const prevButton = document.querySelector('.cd-prev');
+            const nextButton = document.querySelector('.cd-next');
+            let currentIndex = 0;
+
+            function updateNavigation() {
+                prevButton.classList.toggle('inactive', currentIndex === 0);
+                nextButton.classList.toggle('inactive', currentIndex === sections.length - 1);
+            }
+
+            function scrollToSection(index) {
+                if (index >= 0 && index < sections.length) {
+                    sections[index].scrollIntoView({ behavior: 'smooth' });
+                    currentIndex = index;
+                    updateNavigation();
+                }
+            }
+
+            nextButton.addEventListener('click', () => {
+                scrollToSection(currentIndex + 1);
+            });
+
+            prevButton.addEventListener('click', () => {
+                scrollToSection(currentIndex - 1);
+            });
+
+            window.addEventListener('wheel', (event) => {
+                if (event.deltaY > 0) {
+                    scrollToSection(currentIndex + 1);
+                } else {
+                    scrollToSection(currentIndex - 1);
+                }
+            });
+
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowDown') {
+                    scrollToSection(currentIndex + 1);
+                } else if (event.key === 'ArrowUp') {
+                    scrollToSection(currentIndex - 1);
+                }
+            });
+
+            updateNavigation();
+        });
+    </script>
 </body>
 </html>
-
-.cd-fixed-background .cd-content::after {
-  /* phone image on small devices */
-  content: '';
-  display: block;
-  width: 100%;
-  padding: 60% 0;
-  margin: 2em auto 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-.cd-fixed-background {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-.cd-fixed-background.img-1 {
-  background-image: url("../img/img-1.jpg");
-}
-
-.cd-fixed-background.img-2 {
-  background-image: url("../img/img-2.jpg");
-}
-
-.cd-fixed-background.img-3 {
-  background-image: url("../img/img-3.jpg");
-}
