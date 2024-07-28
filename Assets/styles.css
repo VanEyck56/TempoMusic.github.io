@@ -10,6 +10,7 @@ header {
     color: white;
     padding: 1rem;
     position: fixed;
+    min-height: 83px;
     width: 100%;
     z-index: 1000;
     display: flex;
