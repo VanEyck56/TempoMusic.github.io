@@ -112,8 +112,8 @@ section {
     }
 
     nav ul {
-	    flex-direction: column;
-	}
+        flex-direction: column;
+    }
 }
 
 #welcome {
@@ -192,12 +192,10 @@ section {
 /* Slider styles */
 #slider {
     position: relative;
-    padding: 7rem 0;
     background: black;
 }
 
 .slider-container {
-    width: 80%;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -217,6 +215,9 @@ section {
 .slider-dots {
     text-align: center;
     padding-top: 1rem;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
 }
 
 .slider-dots .dot {
@@ -237,7 +238,6 @@ section {
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
     margin: auto;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -252,6 +252,9 @@ section {
 .slider img {
     width: 100%;
     min-width: 100%;
+    height: calc(100vh - 83px);
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Styles spécifiques pour les sections de texte */
