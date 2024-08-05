@@ -1,36 +1,64 @@
-html, body {
-    height: 100%;
-}
-
-.cd-fixed-background {
-    height: 100vh;
+main::before{
+    content: '';
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    height: calc( 100vh - 83px );
+    background-image: url(contact-specific-background.jpg);
+/*    background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
 }
 
-.cd-fixed-background.img-1 {
-    background-image: url('contact-specific-background1.jpg');
-}
+.center-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.cd-fixed-background.img-2 {
-    background-image: url('contact-specific-background1.jpg');
 }
-
-.cd-fixed-background.img-3 {
-    background-image: url('contact-specific-background.jpg');
-}
-
 .cd-content {
     position: relative;
-    top: 15%;
     z-index: 2;
     max-width: 800px;
     margin: auto;
     text-align: center;
-    color: white;
+    color: #ffffff;
     padding: 2rem;
+}
+.cd-content.glassmorphisme.light-bg{
+    color:#12223c;
+}
+.cd-content.glassmorphisme.dark-bg{
+    color:#ffffff;
+}
+.glassmorphisme.light-bg::before{
+    background: rgba(255, 255, 255, 0.4);
+}
+.glassmorphisme.dark-bg::before{
+    background:rgba(0, 0, 0, 0.2);
+}
+.glassmorphisme::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+
+@media (max-width: 768px) {
+    .cd-content.glassmorphisme{
+        margin-right: 25px;
+        margin-left: 25px;
+    }
 }
 
 
